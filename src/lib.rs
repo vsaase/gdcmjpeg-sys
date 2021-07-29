@@ -6,12 +6,6 @@ pub mod bindings8;
 pub mod bindings12;
 pub mod bindings16;
 
-// mod bindings {
-//     include!(concat!(env!("OUT_DIR"),"/bindings8.rs"));
-//     include!(concat!(env!("OUT_DIR"),"/bindings12.rs"));
-//     include!(concat!(env!("OUT_DIR"),"/bindings16.rs"));
-// }
-
 use std::mem;
 use std::ffi::CString;
 use libc;
