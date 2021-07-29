@@ -142,7 +142,7 @@ pub fn decode16_bytes(src: &mut [u8]) -> (Vec<u16>, u32, u32) {
         while cinfo.output_scanline < cinfo.output_height {
             let offset = cinfo.output_scanline as usize * row_stride;
             let mut jsamparray = [buffer[offset..].as_mut_ptr()];
-            jpeg16_jpeg_read_scanlines(&mut cinfo, jsamparray.as_mut_ptr() as bindings12::JSAMPARRAY, 1);
+            jpeg16_jpeg_read_scanlines(&mut cinfo, jsamparray.as_mut_ptr() as bindings16::JSAMPARRAY, 1);
         }
         jpeg16_jpeg_finish_decompress(&mut cinfo);
         jpeg16_jpeg_destroy_decompress(&mut cinfo);
